@@ -1,0 +1,19 @@
+//Question: Find all employees whose salary is greater than the average salary of their own department.
+
+//Example:
+Department	Average Salary
+IT	60000
+HR	35000
+Finance	45000
+// case 
+SELECT
+    name,
+    sal,
+    CASE
+        WHEN sal >= 60000 THEN 'Excellent'
+        WHEN sal >= 40000 THEN 'Good'
+        ELSE 'Average'
+    END AS salary_status
+FROM employee;
+
+
